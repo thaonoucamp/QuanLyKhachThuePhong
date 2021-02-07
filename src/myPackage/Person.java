@@ -3,6 +3,7 @@ package myPackage;
 import java.util.Scanner;
 
 public class Person {
+    // Lớp người có những đặc điểm cơ bản;
     private String hoTen;
     private String soCMND;
     private String queQuan;
@@ -49,6 +50,7 @@ public class Person {
                 '}';
     }
 
+    // Hàm nhập thông tin cơ bản;
     public void nhapThongTinKhach() {
         Scanner sc = new Scanner(System.in);
 
@@ -62,6 +64,7 @@ public class Person {
         soCMND = sc.nextLine();
     }
 
+    // Hàm hiển thị thông tin cơ bản;
     public void hienThiThongTinKhach() {
         System.out.println("Ho va Ten: " + hoTen);
         System.out.println("Que quan: " + queQuan);

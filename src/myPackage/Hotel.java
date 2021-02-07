@@ -3,6 +3,8 @@ package myPackage;
 import java.util.Scanner;
 
 public class Hotel {
+
+    // Lớp khách sạn có đặc điểm cơ bản và có đối tượng Người;
     private int soNgayTro;
     private String loaiPhong;
     private double giaPhong;
@@ -60,12 +62,14 @@ public class Hotel {
                 '}';
     }
 
+    // Hàm nhập các thông tin cần quản lý của khách sạn;
     public void nhapThongTinCanQuanLy() {
         Scanner sc = new Scanner(System.in);
 
-        // Nhập thông tin khách trọ;
+        // Khởi tạo đối tượng Người trong lớp khách sạn để quản lý;
         nguoi = new Person();
 
+        // Nhập thông tin khách trọ;
         nguoi.nhapThongTinKhach();
 
         System.out.println("Nhap so ngay thue: ");
@@ -78,6 +82,7 @@ public class Hotel {
         giaPhong = sc.nextDouble();
     }
 
+    // Hàm hiển thị thông tin của khách;
     public void hienThiThongTinKhach() {
         nguoi.hienThiThongTinKhach();
 
@@ -88,6 +93,7 @@ public class Hotel {
         System.out.println("Gia phong: " + giaPhong);
     }
 
+    // Hàm tính tiền khi Khách CheckOut;
     public double tinhTien() {
         return soNgayTro * giaPhong;
     }

@@ -8,8 +8,9 @@ public class Main {
             // Tạo 1 list lưu thông tin khách tro;
         ArrayList<Hotel> listKhach = new ArrayList<>();
 
-        Hotel khach;
-        int n; // Số khác trọ;
+        Hotel khach; // Khởi tạo đối tượng Khách;
+
+        int n; // Số lượng khác trọ;
 
         Scanner sc = new Scanner(System.in);
 
@@ -20,9 +21,10 @@ public class Main {
             khach = new Hotel();
 
             System.out.println("Nhap thong tin khach thu " + (i+1) + ":");
-            khach.nhapThongTinCanQuanLy();
 
-            listKhach.add(khach);
+            khach.nhapThongTinCanQuanLy(); // Gọi Hàm quản lý thông tin của Khách sạn;
+
+            listKhach.add(khach); // Thêm khách vào list danh sách;
         }
 
         // Hàm hiển thị danh sách khách trọ;
@@ -31,7 +33,7 @@ public class Main {
             listKhach.get(i).hienThiThongTinKhach();
         }
 
-        // Hàm tính tiền  CheckOut;
+        // Hàm CheckOut;
         System.out.println("Nhap so CMTND cua khach: ");
         String timId = sc.nextLine();
 
